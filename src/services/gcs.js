@@ -1,23 +1,21 @@
-import fs from "fs"
-import Storage from "@google-cloud/storage"
+import { Storage } from "@google-cloud/storage"
 import { FileService } from "medusa-interfaces"
 
 class GCSService extends FileService {
   constructor({ }, options) {
     super()
-
-    this.bucketName_ = options.bucketName
+    this.bucketName = options.bucketName
     this.projectId = options.projectId
-    this.client_email_ = options.credentials.client_email
-    this.private_key_ = options.credentials.private_key
+    this.client_email = options.credentials.client_email
+    this.private_key = options.credentials.private_key
   }
 
   upload(file) {
     const storage = new Storage({
       projectId: this.projectId,
       credentials: {
-        client_email: this.credentials.client_email,
-        private_key: this.credentials.private_key,
+        client_email: this.client_email,
+        private_key: this.private_key,
       }
     })
 
@@ -39,12 +37,13 @@ class GCSService extends FileService {
     const storage = new Storage({
       projectId: this.projectId,
       credentials: {
-        client_email: this.credentials.client_email,
-        private_key: this.credentials.private_key,
+        client_email: this.client_email,
+        private_key: this.private_key,
       }
     })
 
     const bucket = storage.bucket(this.bucketName)
+
     const fileToDelete = bucket.file(`${file}`)
 
     return new Promise((resolve, reject) => {

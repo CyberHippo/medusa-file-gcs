@@ -1,6 +1,6 @@
 {
   "name": "medusa-file-gcs",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Google Cloud Storage file for Medusa",
   "main": "index.js",
   "repository": "https://github.com/arnaudaprahamian/medusa-file-gcs",
@@ -38,5 +38,11 @@
     "prepare": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore **/__tests__",
     "test": "jest"
-  }
+  },
+  "keywords": [
+    "medusa",
+    "gcs",
+    "file",
+    "medusa-plugin"
+  ]
 }
