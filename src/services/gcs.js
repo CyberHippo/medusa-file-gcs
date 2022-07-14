@@ -5,18 +5,12 @@ class GCSService extends FileService {
   constructor({ }, options) {
     super()
     this.bucketName = options.bucketName
-    this.projectId = options.projectId
-    this.client_email = options.credentials.client_email
-    this.private_key = options.credentials.private_key
+    this.key_file_name = options.key_file_name
   }
 
   upload(file) {
     const storage = new Storage({
-      projectId: this.projectId,
-      credentials: {
-        client_email: this.client_email,
-        private_key: this.private_key,
-      }
+      keyFilename: this.key_file_name,
     })
 
     const bucket = storage.bucket(this.bucketName)
@@ -35,11 +29,7 @@ class GCSService extends FileService {
 
   delete(file) {
     const storage = new Storage({
-      projectId: this.projectId,
-      credentials: {
-        client_email: this.client_email,
-        private_key: this.private_key,
-      }
+      keyFilename: this.key_file_name,
     })
 
     const bucket = storage.bucket(this.bucketName)
