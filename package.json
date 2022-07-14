@@ -1,9 +1,9 @@
 {
-  "name": "medusa-file-gcs",
-  "version": "0.1.0",
+  "name": "@cyberhippo/medusa-file-gcs",
+  "version": "1.0.0",
   "description": "Google Cloud Storage file for Medusa",
   "main": "index.js",
-  "repository": "https://github.com/arnaudaprahamian/medusa-file-gcs",
+  "repository": "https://github.com/CyberHippo/medusa-file-gcs",
   "author": "Arnaud APRAHAMIAN",
   "license": "MIT",
   "devDependencies": {
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-classes": "^7.15.4",
-    "@google-cloud/storage": "^6.0.1",
+    "@google-cloud/storage": "^6.2.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "medusa-core-utils": "^1.1.31",
@@ -43,6 +43,7 @@
     "medusa",
     "gcs",
     "file",
-    "medusa-plugin"
+    "medusa-plugin",
+    "medusa-file"
   ]
 }
