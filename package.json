@@ -1,6 +1,6 @@
 {
-  "name": "medusa-file-gcs",
-  "version": "0.1.0",
+  "name": "@cyberhippo/medusa-file-gcs",
+  "version": "1.0.0",
   "description": "Google Cloud Storage file for Medusa",
   "main": "index.js",
   "repository": "https://github.com/CyberHippo/medusa-file-gcs",
