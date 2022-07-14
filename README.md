@@ -15,7 +15,7 @@ You must configure the following parameters in your `medusa-config.js`:
 ```js
 const plugins = [
   {
-    resolve: `medusa-file-gcs`,
+    resolve: `@cyberhippo/medusa-file-gcs`,
     options: {
       bucketName: "myBucketName",
       keyFileName: "pathToTheServiceAccountJsonKeyFile",
