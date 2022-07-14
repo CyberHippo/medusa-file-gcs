@@ -1,6 +1,6 @@
 {
   "name": "@cyberhippo/medusa-file-gcs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Google Cloud Storage file for Medusa",
   "main": "index.js",
   "repository": "https://github.com/CyberHippo/medusa-file-gcs",
@@ -17,7 +17,7 @@
     "@babel/register": "^7.7.4",
     "@babel/runtime": "^7.9.6",
     "client-sessions": "^0.8.0",
-    "cross-env": "^5.2.1",
+    "cross-env": "^7.0.3",
     "eslint": "^6.8.0",
     "jest": "^28.1.3",
     "medusa-test-utils": "^1.1.37"
