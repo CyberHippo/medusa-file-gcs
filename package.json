@@ -22,7 +22,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "jest": "^29.0.1",
-    "medusa-test-utils": "^1.1.37"
+    "medusa-test-utils": "^1.1.37",
+    "rome": "^11.0.0"
   },
   "peerDependencies": {
     "medusa-interfaces": "1.x"
@@ -40,8 +41,8 @@
     "prepare": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore **/__tests__",
     "test": "jest",
-    "lint": "eslint . --ext .js",
-    "lint-fix": "eslint . --ext .js --fix"
+    "lint": "rome ci .",
+    "lint-fix": "rome check . --apply && rome format . --write"
   },
   "keywords": [
     "medusa",
