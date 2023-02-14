@@ -1,10 +1,9 @@
-/* eslint-disable no-empty-pattern */
 import { Storage } from '@google-cloud/storage';
 import { FileService } from 'medusa-interfaces';
 
 class GCSService extends FileService {
-  constructor({ }, options) {
-    super();
+  constructor(container, options) {
+    super(container);
     this.bucketName = options.bucketName;
     this.keyFileName = options.keyFileName;
   }
