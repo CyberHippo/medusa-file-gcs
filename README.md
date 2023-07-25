@@ -1,3 +1,7 @@
+⚠️ This repo is deprecated and unmaintained ⚠️
+
+---
+
 # medusa-file-gcs
 
 Upload files to a Google Cloud Storage bucket.
